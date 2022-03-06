@@ -1,0 +1,24 @@
+<h2 class="topic"> My Experiance</h2>
+
+<div class="container">
+    <% for (const key in Experience) {
+        if (Object.hasOwnProperty.call(Experience, key)) {
+            const element = Experience[key]; 
+            if(element.state===1){
+            %>
+  
+    <div class="card">
+        <div class="box">
+         
+            <div class="text">
+                <h2><%=element.expName%></h2>
+                <h3><%=element.companyName%></h3>
+                <p><%=element.expDesc%></p>
+            </div>
+        </div>
+     
+
+    </div>
+    <% } } }%>
+  
+</div>

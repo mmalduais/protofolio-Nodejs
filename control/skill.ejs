@@ -1,0 +1,22 @@
+<h2 class="topic">Skills</h2>
+<div class="container">
+    <div class="skills">
+        <% for (const key in skills) {
+            if (Object.hasOwnProperty.call(skills, key)) {
+                const element = skills[key]; 
+                if(element.state===1){
+                %>
+        
+        
+        <div class="skill">
+            <h3> <%= element.skillName %><span><%= element.skillRange  %>%</span></h3>
+            <div class="the-progress">
+                <span style="width: <%= element.skillRange  %>%"></span>
+            </div>
+        </div>
+            <% } } }%>
+            
+
+    </div>
+    
+</div>

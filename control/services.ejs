@@ -1,0 +1,27 @@
+<h2 class="topic">Services</h2>
+
+<div class="container">
+
+    <% for (const key in serviceschema) {
+        if (Object.hasOwnProperty.call(serviceschema, key)) {
+            const element = serviceschema[key]; 
+            if(element.state===1){
+            %>
+
+    <div class="card">
+        <div class="box">
+            <i class="fas fa-desktop fa-3x" style="border-radius: 50%; color: #007bff;"></i>
+            <div class="text">
+                <h2><%element.servName%>=</h2>
+
+            </div>
+        </div>
+        <div class="info">
+            <p><%element.servDesc%></p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    <% } } }%>
+
+
+</div>

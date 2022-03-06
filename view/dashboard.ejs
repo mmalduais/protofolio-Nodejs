@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+   
+    <link rel="stylesheet" href="/css/skill.css">
+    <link rel="stylesheet" href="/css/exper.css">
+    <link rel="stylesheet" href="/css/personal-page.css">
+    <link rel="stylesheet" href="/public/css/add-personal.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/add-prework.css">
+
+
+    <link rel="stylesheet" href="/css/personal-Edait.css">
+
+   
+
+ 
+ 
+    
+
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="/vendor/css/normalize.css" >
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="/vendor/css/all.min.css" />
+    <!-- Main Template CSS File -->
+
+
+    <link rel="stylesheet" href="/vendor/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/personal-page.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/exper.css">
+    
+    <link rel="stylesheet" href="/css/profile.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap" rel="stylesheet" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div class="sidebar">
+        <header>Dash Board</header>
+        <ul>
+
+            <li id="personalData"><a href="#"><i class="fas fa-qrcode"></i>Personal Data</a></li>
+            <li id="skills"><a href="#"><i class="fas fa-link"></i>Skills</a></li>
+            <li id="exp"><a href="#"><i class="fas fa-calendar-week"></i>Experiance</a></li>
+            <li id="services"><a href="#"><i class="fas fa-calendar-week"></i>services</a></li>
+         
+            <li id="pre"><a href="#"><i class="fas fa-calendar-week"></i>Prework</a></li>
+            <li id="contact"><a href="#"><i class="fas fa-calendar-week"></i>contact</a></li>
+        
+            <li><a href="#"><i class="fas fa-question-circle"></i></a></li>
+
+
+
+
+        </ul>
+    </div>
+    <section class="tabs-container">
+        <div class="tab1 ">
+            
+
+            <div id="data" class="container ">
+                <div class="row">
+                    <div class="card" style=" width: 13rem;">
+                        <img src="/uploads/images/<%= photo.image %>" style="max-width: 100px ; margin: auto; border-radius: 50%;"
+
+                        <div class="card-body">
+                            <p class="card-text" style="color: blue; font-size: 20px;">Kevin Anderson</p>
+                            <p>Web Designer</p>
+                            <i class="fab fa-twitter" style="color: rebeccapurple;"></i>
+                            <i class="fab fa-facebook" style="color: rebeccapurple;"></i>
+                            <i class="fab fa-instagram-square" style="color: rebeccapurple;"></i>
+                            <i class="fab fa-linkedin" style="color: rebeccapurple;"></i>
+                        </div>
+                        <a href="personal-Edait"><i class="fas fa-user-edit"></i></a>
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row " style="padding-top: 10px;">
+                                        <div class="col-lg-5 " style="color: blue;">First Name:</div>
+                                        <div class="col-lg-7 ">Kevin </div>
+                                        <div class="col-lg-5 " style="color: blue;">Last Name:</div>
+                                        <div class="col-lg-7 "> Anderson</div>
+                                        <div class="col-lg-5 " style="color: blue;">Company:</div>
+                                        <div class="col-lg-7 ">Lueilwitz, Wisoky and Leuschke</div>
+                                        <div class="col-lg-4 " style="color: blue;">Email:</div>
+                                        <div class="col-lg-8 ">k.anderson@example.com</div>
+                                        <div class="col-lg-5 " style="color: blue;">Address:</div>
+                                        <div class="col-lg-7 ">USA</div>
+                                        <div class="col-lg-5 " style="color: blue;">Phone:</div>
+                                        <div class="col-lg-7 ">(436) 486-3538 x29071</div>
+                                        <div class="col-lg-4 " style="color: blue;">Time-Zone:</div>
+                                        <div class="col-lg-8 ">k.anderson@example.com</div>
+                                        <div style="border-bottom: 1px solid black;"></div>
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+      
+          
+        </div>
+
+
+
+        <!----Start Our-Skill------------------------------------------------------------>
+        <div class="tab2 hide">
+
+            <!----Start Our-Skill------------->
+            <div class="myskill" id="Skill">
+
+                <h2 class="topic" style="font-size: 21px;
+        text-align: center;
+        padding-top: 20px;">Skills</h2>
+
+
+
+                <div class="container">
+                    <div class="skills">
+                        <a href="add-skill"><i class="fas fa-plus-circle"></i></a> 
+                        
+
+
+
+                        <% skill.forEach(ele => { 
+                            if(ele.state === 1) { %>
+                            <div class="skill">
+                                <h3> <%= ele.skillName %>  </h3>
+                                <div class="the-progress">
+                                    <span style="width: <%= ele.skillRange %>%"></span>
+                                </div>
+                                <div class="icon">
+                                    <a href="/edit-skill/<%= ele._id %>"><i class="fas fa-user-edit"></i></a>
+                                    <!-- <i  class="fas fa-trash"></i> -->
+                                    <!--Modal Delet-->
+                                    <a href="/delete-skill/<%= ele._id %>"> <i
+                                            class="fas fa-trash"></i>
+                                    </a>
+    
+                                    
+                                    <!-- <a href="add-skill.html"><i class="fas fa-plus-circle"></i></a> -->
+                                </div>
+                            </div>
+                        <% }}) %>
+                        
+                     
+                    </div>
+                  
+
+                </div>
+                <div></div>
+                <div></div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+        <!-----------------------Education------------------------->
+       
+        <!-----------------Ex---myexperiance----------------------------------------------->
+
+
+        <div id="exp" class="container hide tab4">
+
+            <div class="myexper" id="exp">
+                <h2 class="topic" style="text-align: center; color: blue;"> My Experiance</h2>
+                <a href="add-exper"><i class="fas fa-plus-circle" style="margin-top: 25px;"></i></a> 
+                <div class="container">
+               
+                    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+                    <% exp.forEach(el => { 
+                        if(el.state === 1) {%>
+                        
+                        <div class="card">
+                            <div class="box">
+                                <div class="text">
+                                    <h2> <%= el.expName %>  </h2>
+                                    <h3> <%= el.companyName %></h3>
+
+                                    <p>
+                                        <%= el.expDesc %>
+                                    </p>
+    
+                                </div>
+                                <div class="icon">
+                                    <a href="/edait-exper/<%= el._id %>"><i class="fas fa-user-edit"></i></a></a>
+                                    <!-- <i  class="fas fa-trash"></i> -->
+                                    <!--Modal Delet-->
+                                    <a href="/delete-exper/<%= el._id %>" > <i class="fas fa-trash"></i></a>
+                
+                                    <!-- <a href="add-exper.html"><i class="fas fa-plus-circle"></i></a> -->
+                                </div>
+                            </div>
+                          
+    
+                        </div>
+                    <% }}) %>
+
+                <!--########### ############################################################### -->
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!---------------------Start-Services-------------------------------------->
+
+        <div id="services" class="container hide tab3">
+        <h2 class="topic">Services</h2>
+        <a href="add-services"><i class="fas fa-plus-circle" style="margin-top: 25px;"></i></a> 
+
+        <div class="services" id="services">
+         
+            
+            <div class="container">
+
+    <% serv.forEach(el => { 
+        if(el.state === 1) {%>
+        
+     
+    <div class="card">
+        <div class="box">
+            <i class="fas fa-desktop fa-3x" style="border-radius: 50%; color: #007bff;"></i>
+            <div class="text">
+                <h2><%=el.servName%></h2>
+
+            </div>
+        </div>
+        <div class="info">
+            <p><%=el.servDesc%></p>
+       
+        </div>
+        <div class="icon">
+                                    <a href="/edait-services/<%= el._id %>"><i class="fas fa-user-edit"></i></a></a>
+                                    <!-- <i  class="fas fa-trash"></i> -->
+                                    <!--Modal Delet-->
+                                    <a href="/delete-services/<%= el._id %>" > <i class="fas fa-trash"></i></a>
+                
+                                    <!-- <a href="add-exper.html"><i class="fas fa-plus-circle"></i></a> -->
+                                </div>
+  
+</div>
+    <% }}) %>
+
+</div>
+ 
+</div>
+</div>
+
+
+
+
+
+
+        <!---------------------End-PreWork-------------------------------------->
+
+
+
+
+        <!----------------------PreWork-------------------------------------->
+
+        
+
+        <div id="exp" class="container hide tab5">
+           
+            <div class="prework" id="prework">
+                <h2 class="topic">Pre-Work</h2>
+                <a href="/add-prework"><i class="fas fa-plus-circle" style="margin-top: 25px;"></i></a> 
+
+                <div class="container">
+
+                    <% preww.forEach(ele => { %>
+                     
+               
+                      
+                     
+                    <div class="card">
+                        <div class="box">
+                            <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3" style="color: #007bff;"></i>
+        
+                              
+                            <div class="text">
+                                <h2>
+                               <%=ele.npre%> </h2>
+        
+                            </div>
+                        </div>
+                        <div class="info">
+                            <img src="/image/coffee.png " width="250px" height="600px">
+                            <a href="#">Read More</a>
+                            <h2><%=ele.imgpre%></h2>
+                            <div class="icon">
+                                <a href="/edait-exper"><i class="fas fa-user-edit"></i></a></a>
+                                <i class="fas fa-trash" style="margin-top: 20px;"></i>
+                           
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <% }) %>
+ 
+        
+                </div>
+            </div>
+        
+
+        </div>
+
+
+
+        <!----EndPreWork-------------------------------->
+
+
+        <!------------ Start-Contact Form----------------------------------------->
+            
+        <div id="contact" class="container hide tab6">
+    <div class="container" id="contact">
+        <button class="switch-btn">
+            <span>light </span>
+            <span> night </span>
+            <span class="switch"></span>
+          </button>
+        <h1 style="text-align: center; margin-bottom: 0;" id="heading">Validated Form</h1>
+        <div class="form">
+            <div class="content">
+              <form action="">
+                <input
+                  type="text"
+                  id="name"
+                  class="input"
+                  name="text"
+                  placeholder="Your Name"
+                />
+                <input
+                  type="email"
+                  id="email"
+                  class="input"
+                  name="email"
+                  placeholder="Your Email"
+                />
+                <input
+                  type="password"
+                  id="password"
+                  class="input"
+                  name="password"
+                  placeholder="Your Password"
+                />
+                <input
+                  type="password"
+                  id="confirmedPassword"
+                  class="input"
+                  name="c-password"
+                  placeholder="Confirm Your Password"
+                />
+            </div>
+            <div class="content">
+                    <input
+                    type="number"
+                    id="phone"
+                    class="input"
+                    name="phone"
+                    placeholder="Your Phone"
+                  />
+                    
+                <input
+                  type="number"
+                  id="age"
+                  class="input"
+                  name="age"
+                  placeholder="Your Age"
+                />
+        
+                <input
+                  type="url"
+                  id="url"
+                  class="input"
+                  name="url"
+                  placeholder="Put a Link"
+                />
+        
+                <textarea
+                  name="message"
+                  id="message"
+                  class="input"
+                  placeholder="Tell Us About Your Needs"
+                  class="input"
+                  rows="2"
+                ></textarea>
+                  
+                <!-- <button value="Send" id="submit" >Send</button> -->
+              </form>
+            </div>
+            <!-- <button id="btn">click me</button> -->
+          </div>
+          <input type="submit" value="Send" id="submit" />
+          <p class="validation-message" id="error">everything is OK</p>
+    </div>
+    <script src="/js/contact.js"></script>
+    </div>
+
+
+   
+
+
+
+        <!------------End Contact Form------------------------------------------------>
+
+    </section>
+
+    
+    <!--------------------------------------->
+    <!--------------------------------------->
+    <script src="/js/main.js"></script>
+  
+
+    <script src="/js/jQuery.min.js"></script>
+    <script>
+        $('#personalData').click(function (e) {
+            e.preventDefault();
+            $('.tab1').removeClass("hide");
+     
+         
+
+            $('.tab2').addClass("hide");
+            $('.tab3').addClass("hide");
+            $('.tab4').addClass("hide");
+            $('.tab5').addClass("hide");
+            $('.tab6').addClass("hide");
+
+        })
+
+        $('#skills').click(function (e) {
+            e.preventDefault();
+            $('.tab2').removeClass("hide");
+            $('.tab1').addClass("hide");
+            $('.tab3').addClass("hide");
+            $('.tab4').addClass("hide");
+            $('.tab5').addClass("hide");
+            $('.tab6').addClass("hide");
+          
+
+        })
+        $('#services').click(function (e) {
+            e.preventDefault();
+            $('.tab3').removeClass("hide");
+            $('.tab1').addClass("hide");
+            $('.tab2').addClass("hide");
+            $('.tab4').addClass("hide");
+            $('.tab5').addClass("hide");
+            $('.tab6').addClass("hide");
+
+        })
+
+
+        $('#exp').click(function (e) {
+            e.preventDefault();
+            $('.tab4').removeClass("hide");
+            $('.tab1').addClass("hide");
+            $('.tab2').addClass("hide");
+            $('.tab3').addClass("hide");
+            $('.tab5').addClass("hide");
+            $('.tab6').addClass("hide");
+           
+
+        })
+
+        $('#pre').click(function (e) {
+            e.preventDefault();
+            $('.tab5').removeClass("hide");
+            $('.tab1').addClass("hide");
+            $('.tab2').addClass("hide");
+            $('.tab3').addClass("hide");
+            $('.tab4').addClass("hide");
+            $('.tab6').addClass("hide");
+         
+
+        })
+        $('#contact').click(function (e) {
+            e.preventDefault();
+            $('.tab6').removeClass("hide");
+            $('.tab4').addClass("hide");
+            $('.tab1').addClass("hide");
+            $('.tab2').addClass("hide");
+            $('.tab3').addClass("hide");
+            $('.tab5').addClass("hide");
+          
+
+        })
+    
+
+
+    </script>
+</body>
+
+</html>

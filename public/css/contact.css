@@ -1,0 +1,154 @@
+:root {
+    --main-transition: 0.5s;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+  }
+  .form {
+    display: flex;
+    flex-basis: 100%;
+    /* width: 700px; */
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-block: 30px;
+  }
+  .form .input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    background-color: #333;
+    color: white;
+    caret-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .form textarea.input {
+    resize: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .form .input:focus {
+    outline: none;
+  }
+  [type="submit"] {
+    display: block;
+    width: 107%;
+    padding: 15px;
+    border: none;
+    background-color: rgb(201, 201, 201);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .form [type="submit"]:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .validation-message {
+    text-align: center;
+    padding: 15px;
+    width: 110%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .error {
+    color: red;
+  }
+  .validated {
+    color: green;
+  }
+  
+  /* switch button  */
+  
+  .switch-btn {
+    position: relative;
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1px solid white;
+  }
+  .switch-btn span {
+    display: inline-block;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: black;
+  }
+  .switch {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    border-radius: 10px;
+    margin: 0;
+    display: block;
+    transition: 0.3s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  .slide .switch {
+    left: 50%;
+  }
+  
+  /* --------------- night mode ---------------- */
+  .night-body {
+    background-color: black;
+  }
+  .night-text {
+    color: white;
+  }
+  .night-input {
+    background-color: #eee !important;
+    color: black !important;
+    caret-color: black !important;
+  }
+  

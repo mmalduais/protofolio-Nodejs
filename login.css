@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact .container {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .container form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.contact form h2 {
+  color: black;
+  color: black;
+  margin-left: 120px;
+}
+
+.contact form p {
+  position: absolute;
+  right: 61%;
+  top: 50%;
+}
+
+.contact .container form .main {
+  width: 30%;
+  margin: auto;
+
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  background: #eeeeeebf;
+
+}
+
+.contact .container form .main-sub {
+  width: 32%;
+  margin: auto;
+  margin-bottom: 5px;
+  border-radius: 7px;
+  padding: 10px;
+  background: red;
+
+  font-size: 20px;
+  color: white;
+
+}
+
+.contact .container .info {}
+
+.contact .container .info button {
+  display: block;
+  color: #606060;
+  /* text-align: center; */
+  width: 155px;
+  padding: 9px;
+  margin: auto;
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
+.contact .container .info button .btn {
+  border: none;
+  color: rebeccapurple;
+}

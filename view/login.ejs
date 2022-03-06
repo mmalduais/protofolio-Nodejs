@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <!-- <link rel="stylesheet" href="login.css"> -->
+  <title>Document</title>
+</head>
+
+<body dir="rtl">
+
+  <!-- Start Contact_us -->
+  <div class="contact">
+    <div class="container">
+
+
+      <div >
+        <h2>تسجيل الدخول</h2>
+
+        <input id="logemail" class="main" type="text" name="name" placeholder="البريد الالكتروني او رقم الجوال">
+        <input id="logpass" class="main" type="password" name="name" placeholder="كلمة السر">
+        <p>نسيت؟</p>
+
+        <input id="log" onclick="login();" class="main-sub" type="submit" value="تسجيل الدخول">
+
+      </div>
+     
+
+
+    </div>
+
+  </div>
+
+
+  <script>
+                      
+    var lg = document.getElementById('log');
+    function login()
+    {
+      var user = document.getElementById('logemail').value;
+    var pass = document.getElementById('logpass').value;
+    if( user == "mmm" && pass == "mmm")
+      location.href = "/dashboard";
+      else
+      alert('try again');
+    }
+    
+    // $('#log').click(function(){
+
+
+    // });
+    
+  </script>
+
+  <script src="/js/login.js"></script>
+</body>
+
+</html>
